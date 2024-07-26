@@ -1,0 +1,142 @@
+@font-face {
+    font-family:interbold;
+    src: url(./Inter-Bold.ttf);
+}
+
+*{
+    font-family: 'interbold';
+}
+
+.row{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* gap: 1rem; */
+}
+.logo {
+  width:30%;
+  word-spacing: normal;
+  display: flex ;
+
+}
+.logo:nth-child(odd) {
+  justify-content: end;
+
+}
+.logo:nth-child(even) {
+  justify-content:start;
+
+}
+.logo img{
+  width: 8vw;
+  height: 4vh;
+}
+.logo p{
+  font-size:3vw;
+  text-transform: capitalize;
+  word-spacing: normal;
+}
+.navbar {
+  transition: top 0.3s ease;
+}
+
+.blinking-colon {
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  0%, 50%, 100% {
+      opacity: 1;
+  }
+  25%, 75% {
+      opacity: 0;
+  }
+} 
+
+.socials{
+  position: relative;
+}
+
+
+.social {
+
+  transition: width 0.3s ease;
+}
+.overflow-x-auto::-webkit-scrollbar{
+  display: none;
+}
+
+#slider {
+  animation: slide 15s infinite linear;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.loader::-webkit-scrollbar{
+  display: none;
+}
+
+.loader {
+  overscroll-behavior: none;
+}
+
+
+ul li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 20px;
+
+}
+ul li a {
+  font-family: arial;
+  text-decoration: none;
+  position: relative;
+  font-size: 2.1vw;
+  display: block;
+
+}
+ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 3px;
+  background-color:black;
+  transform-origin: bottom right;
+  transition: transform 0.5s ease;
+  transform: scaleX(0);
+}
+ul a:hover::after {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
+
+.socials h1{
+  position: relative;
+}
+
+.socials h1::after {
+  content: '';
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 3px;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.5s ease;
+  transform: scaleX(0);
+}
+
+
+.socials h1:hover::after {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
